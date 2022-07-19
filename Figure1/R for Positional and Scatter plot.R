@@ -77,11 +77,6 @@ ggplot(Data,aes(x = WT,y = Deletion), ) + xlim(0,1) + ylim(0,1) +
 ggplot()+geom_point(data=Data, aes(x=Distance, y=Dvalue, group=Distance, color=type), size=0.25, alpha=0.1) + ylim(-1,1) + xlim(0,1000) +
   scale_color_manual(name = '', values = c('Up'='#DA1212','Non'='grey','Down'='#3E7C17')) + theme(legend.position = "none")
 
-rm(list=ls())
-options(stringsAsFactors = F)
-library(dplyr)
-library(ggpubr)
-
 ## Plot for internal exon
 # Start
 Data <- read.csv("iM6A_Mouse_IL_Start.csv")
